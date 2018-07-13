@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EventService } from '../shared/event.service';
 
 @Component({
-  templateUrl: './events-details.component.html',
+  templateUrl: './event-details.component.html',
   styles: [`
     .container { 
        padding-left: 20px;
