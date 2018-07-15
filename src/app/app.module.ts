@@ -8,6 +8,8 @@ import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { EventService } from './events/shared/event.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
+import {CreateEventComponent} from './events/create-event.component';
+
 import { appRoutes } from './routes';
 
 @NgModule({
@@ -20,6 +22,7 @@ import { appRoutes } from './routes';
     EventListComponent,
     EventThumbnailComponent,
     EventDetailsComponent,
+    CreateEventComponent,
     NavBarComponent
   ],
   providers: [EventService],
