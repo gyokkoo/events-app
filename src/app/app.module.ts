@@ -4,11 +4,11 @@ import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import {
-EventListComponent,
-EventThumbnailComponent,
-EventService,
-EventDetailsComponent,
-CreateEventComponent
+  EventListComponent,
+  EventThumbnailComponent,
+  EventService,
+  EventDetailsComponent,
+  CreateEventComponent, CreateSessionComponent
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
@@ -34,7 +34,8 @@ import { AuthService } from './user/auth.service';
     EventDetailsComponent,
     CreateEventComponent,
     NavBarComponent,
-    Error404Component
+    Error404Component,
+    CreateSessionComponent
   ],
   providers: [
     EventService,
