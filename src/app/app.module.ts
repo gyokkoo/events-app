@@ -8,14 +8,17 @@ import {
   EventThumbnailComponent,
   EventService,
   EventDetailsComponent,
-  CreateEventComponent, CreateSessionComponent, SessionListComponent
+  CreateEventComponent,
+  CreateSessionComponent,
+  SessionListComponent,
+  DurationPipe
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
 
 import { appRoutes } from './routes';
-import { CollapsibleWellComponent } from './common/collapsible-well.component';
+import { CollapsibleWellComponent } from './events/event-details/common/collapsible-well.component';
 import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/event-list-resolver.service';
 import { Error404Component } from './errors/404.component';
@@ -38,7 +41,8 @@ import { AuthService } from './user/auth.service';
     Error404Component,
     CreateSessionComponent,
     SessionListComponent,
-    CollapsibleWellComponent
+    CollapsibleWellComponent,
+    DurationPipe
   ],
   providers: [
     EventService,
