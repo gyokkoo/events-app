@@ -23,6 +23,7 @@ import { EventRouteActivator } from './events/event-details/event-route-activato
 import { EventListResolver } from './events/event-list-resolver.service';
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
+import {ToastrService} from './common/toastr.service';
 
 @NgModule({
   imports: [
@@ -46,6 +47,7 @@ import { AuthService } from './user/auth.service';
   ],
   providers: [
     EventService,
+    ToastrService,
     EventRouteActivator,
     EventListResolver,
     AuthService,
