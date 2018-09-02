@@ -11,7 +11,7 @@ import {
   CreateEventComponent,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe, UpVoteComponent, VotersService
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
@@ -46,6 +46,7 @@ const jQuery = window['$'];
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
+    UpVoteComponent,
     SimpleModalComponent,
     ModalTriggerDirective
   ],
@@ -53,6 +54,7 @@ const jQuery = window['$'];
     EventService,
     EventRouteActivator,
     EventListResolver,
+    VotersService,
     AuthService,
     { provide: TOASTR_TOKEN, useValue: toastr },
     { provide: JQ_TOKEN, useValue: jQuery },
