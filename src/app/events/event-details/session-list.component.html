@@ -1,7 +1,9 @@
 <div class="row" *ngFor="let session of visibleSessions">
   <div class="col-md-1">
-    <app-up-vote (vote)="toggleVote(session)" [count]="session.voters.length" [voted]="userHasVoted(session)">
-    </app-up-vote>
+    <div *ngIf="auth.isAuthenticated()">
+      <app-up-vote (vote)="toggleVote(session)" [count]="session.voters.length" [voted]="userHasVoted(session)">
+      </app-up-vote>
+    </div>
   </div>
   <div class="col-md-10">
     <app-collapsible-well>
