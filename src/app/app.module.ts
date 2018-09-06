@@ -12,14 +12,13 @@ import {
   CreateEventComponent,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe, UpVoteComponent, VotersService, LocationValidatorDirective
+  DurationPipe, UpVoteComponent, VotersService, LocationValidatorDirective, EventResolver
 } from './events/index';
 
 import { EventsAppComponent } from './events-app.component';
 import { NavBarComponent } from './nav/navbar.component';
 
 import { appRoutes } from './routes';
-import { EventRouteActivator } from './events/event-details/event-route-activator.service';
 import { EventListResolver } from './events/event-list-resolver.service';
 import { Error404Component } from './errors/404.component';
 import { AuthService } from './user/auth.service';
@@ -55,8 +54,8 @@ const jQuery = window['$'];
   ],
   providers: [
     EventService,
-    EventRouteActivator,
     EventListResolver,
+    EventResolver,
     VotersService,
     AuthService,
     { provide: TOASTR_TOKEN, useValue: toastr },
