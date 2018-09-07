@@ -12,13 +12,6 @@ export class AuthService {
   }
 
   loginUser(userName: string, password: string) {
-    // this.currentUser = {
-    //   id: 1,
-    //   firstName: 'Pesho',
-    //   lastName: 'Peshev',
-    //   userName: userName,
-    // };
-
     const loginInfo = { username: userName, password: password};
     const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
@@ -48,5 +41,16 @@ export class AuthService {
   updateCurrentUser(firstName: string, lastName: string) {
     this.currentUser.firstName = firstName;
     this.currentUser.lastName = lastName;
+
+    const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+
+    return this.http.put(`/api/users/${this.currentUser.id}`, this.currentUser, options);
+  }
+
+  logout() {
+    this.currentUser = undefined;
+
+    const options = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+    return this.http.post('/api/logout', {}, options);
   }
 }
