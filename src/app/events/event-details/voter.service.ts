@@ -5,7 +5,7 @@ import {catchError} from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
 
 @Injectable()
-export class VotersService {
+export class VoterService {
   constructor(private http: HttpClient) {
   }
 

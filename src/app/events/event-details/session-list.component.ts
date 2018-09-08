@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges} from '@angular/core';
 import {ISession} from '../shared';
 import {AuthService} from '../../user/auth.service';
-import {VotersService} from './voters.service';
+import {VoterService} from './voter.service';
 
 @Component({
   selector: 'app-session-list',
@@ -14,7 +14,7 @@ export class SessionListComponent implements OnChanges {
   @Input() eventId: number;
   visibleSessions: ISession[] = [];
 
-  constructor(public auth: AuthService, private voterService: VotersService) {}
+  constructor(public auth: AuthService, private voterService: VoterService) {}
 
   ngOnChanges(): void {
     if (this.sessions) {
